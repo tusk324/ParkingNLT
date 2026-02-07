@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div style="text-align: center; padding: 50px;">
+    <h1 style="font-size: 3rem; color: #4caf50;">Payment Successful!</h1>
+    <p style="font-size: 1.5rem; margin-top: 20px; color: #333;">
+      Thank you for your payment. Your parking session has been confirmed.
+    </p>
+    <img src="{{ url_for('static', filename='success.png') }}" alt="Success" style="width: 200px; margin: 20px 0;">
+    <p style="font-size: 1.2rem; color: #555;">
+      Your payment was processed successfully, and you can now park at the Northern Light Tower.
+    </p>
+    <a href="/" style="text-decoration: none; padding: 15px 30px; background-color: #4caf50; color: #fff; border-radius: 5px; font-size: 1.2rem; display: inline-block; margin-top: 20px;">Go Back to Home</a>
+  </div>
+</body>
+</html>

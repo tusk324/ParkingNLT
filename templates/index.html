@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay to Park at the Northern Light Tower</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://js.stripe.com/v3/"></script> <!-- Load Stripe.js -->
+</head>
+<body>
+  <h1>Pay to Park at the Northern Light Tower</h1>
+
+  <!-- Parking Form with Car Details -->
+  <form id="checkout-form" action="/create-checkout-session" method="POST">
+    <!-- Car Model Field -->
+    <label for="car-model">Car Model:</label>
+    <input type="text" id="car-model" name="car_model" placeholder="Enter car model" required><br><br>
+
+    <!-- License Plate Field -->
+    <label for="license-plate">License Plate:</label>
+    <input type="text" id="license-plate" name="license_plate" placeholder="Enter license plate" required><br><br>
+
+    <!-- Note about the Parking Time -->
+    <p><strong>Note:</strong> The allotted time for the parking session is <strong>4 hours</strong>.</p>
+
+    <!-- Checkout Button (Stripe-hosted) -->
+    <button type="submit" style="padding: 15px 30px; font-size: 18px;">Proceed to Checkout</button>
+  </form>
+
+  <script>
+    // This form submits car info to your server and then redirects to Stripe Checkout
+  </script>
+</body>
+</html>
